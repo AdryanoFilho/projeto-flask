@@ -1,0 +1,18 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<h2>Tire sua dúvida sobre Python</h2>
+
+<form method="post" style="margin-bottom: 20px;">
+  <input type="text" name="pergunta" placeholder="Digite sua pergunta" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+  <button type="submit" style="padding: 10px 20px;">Enviar</button>
+</form>
+
+{% if resposta %}
+  <div style="background-color: #f1f1f1; padding: 15px; border-radius: 5px; color: black;">
+    <h3>Resposta da IA:</h3>
+    <div>{{ resposta|safe }}</div>
+  </div>
+{% endif %}
+
+{% endblock %}
