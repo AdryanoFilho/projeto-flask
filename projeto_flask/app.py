@@ -1,4 +1,3 @@
-import bs4
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask_cors import CORS
 import csv
